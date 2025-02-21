@@ -93,6 +93,7 @@ async def main():
                         "date": row.get('date'),
                         "start_time": row.get('start_time'),
                         "end_time": row.get('end_time'),
+                        'name': name,
                         "description": row.get('description'),
                         "library_branch": row.get('library_branch'),
                         "age_group": row.get('age_group'),
