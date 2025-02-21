@@ -1,0 +1,73 @@
+{
+	"actorSpecification": 1,
+	"name": "scraper",
+	"title": "Scraper",
+	"description": "Scrapers",
+	"version": "0.0",
+	"meta": {
+		"templateId": "python-start"
+	},
+	"input": "./input_schema.json",
+	"readme": "../README.md",
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"title": "Scraper",
+			"views": {
+				"results": {
+					"title": "Scraped Results",
+					"transformation": {
+						"fields": [
+							"date",
+							"start_time",
+							"end_time",
+							"name",
+							"description",
+							"library_branch",
+							"age_group",
+							"program_type"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"date": {
+								"label": "date",
+								"format": "string"
+							},
+							"start_time": {
+								"label": "start_time",
+								"format": "string"
+							},
+							"end_time": {
+								"label": "end_time",
+								"format": "string"
+							},
+							"name": {
+								"label": "name",
+								"format": "string"
+							},
+							"description": {
+								"label": "description",
+								"format": "string"
+							},
+							"library_branch": {
+								"label": "library_branch",
+								"format": "string"
+							},
+							"age_group": {
+								"label": "age_group",
+								"format": "string"
+							},
+							"program_type": {
+								"label": "program_type",
+								"format": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
